@@ -1,3 +1,40 @@
-body {
-    background-color: skyblue;
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+
+.header{
+    border-radius: 20px;
+    background: linear-gradient(173deg, #FFAD96 0%, #FF6E67 100%);
+    box-shadow: 8px 8px 16px 0px rgba(255, 255, 255, 0.25) inset, 3px 3px 11px 0px rgba(0, 0, 0, 0.25);
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 75px;
+    padding: 2% 10px;
+    height: 86%;
+    justify-content: center;
+    margin-top: 1%;
+    margin-left: 1%;
+
+}
+
+.headerTitle{
+    font-family: "Shrikhand", serif;
+    color: white;
+    font-size: 44px;
+}
+
+.categories{
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    padding: 0;
+}
+
+.categorie{
+    list-style-type: none;
+    color: white;
+    font-family: "Nunito", sans-serif;
+    font-size: 20px;
 }
