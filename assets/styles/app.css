@@ -55,3 +55,93 @@ body{
 * HomePage CSS
 **/
 
+
+
+/* 
+* LoginPage CSS
+*/
+
+
+.loginForm{
+    border-radius: 20px;
+    background: linear-gradient(173deg, #FFAD96 0%, #FF6E67 100%);
+    box-shadow: 8px 8px 16px 0px rgba(255, 255, 255, 0.25) inset, 3px 3px 11px 0px rgba(255, 110, 103, 0.25);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+    height: 70vh;
+    margin-left: 15%;
+    margin-top: 7%;
+    gap: 55px;
+}
+
+.loginTitle{
+    font-family: "Shrikhand", serif;
+    color: white;
+    font-size: 42px;
+    margin-top: 5%;
+    margin-bottom: 0;
+}
+
+label{
+    font-family: "Nunito", sans-serif;
+    font-size: 25px;
+    color: white;
+    display: flex;
+    align-items: flex-start;
+}
+
+input{
+    border-radius: 20px;
+    background: #FFD7D6;
+    box-shadow: 3px 3px 11px 0px rgba(255, 110, 103, 0.44) inset;
+    border: none;
+    width: 45%;
+    height: 51px;
+    font-size: 30px;
+    font-family: "Nunito", sans-serif;
+}
+
+.input{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    gap: 8px;
+}
+
+button{
+    border-radius: 20px;
+    border: none;
+    background: linear-gradient(95deg, #FFAD96 0%, #FF6E67 100%);
+    box-shadow: 3px 3px 11px 0px rgba(0, 0, 0, 0.25), 8px 8px 16px 0px rgba(255, 255, 255, 0.25) inset;
+    color: white;
+    padding: 10px 30px;
+    font-family: "Nunito", sans-serif;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+button:hover{
+    border-radius: 20px;
+    background: linear-gradient(95deg, #FFAD96 13.5%, #FF6E67 75.5%, #FFAD96 100%);
+    box-shadow: 3px 3px 11px 0px rgba(0, 0, 0, 0.25), 8px 8px 16px 0px rgba(255, 255, 255, 0.25) inset;
+}
+
+button:active{
+    border-radius: 20px;
+    background: linear-gradient(95deg, #FFAD96 13.5%, #FF6E67 50%, #FF6E67 90%);
+    box-shadow: 8px 5px 16px 0px rgba(255, 110, 103, 0.25) inset, 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+}
+
+.buttonLink{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.link{
+    color: white;
+}

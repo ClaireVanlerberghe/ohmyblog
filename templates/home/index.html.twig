@@ -2,6 +2,18 @@
 
 {% block title %}Accueil | Ohmyblog{% endblock %}
 
+
+
+
+
 {% block body %}
+{% if app.user %}
+        <div class="mb-3">
+           <a href="{{ path('app_logout') }}">Deconnexion</a>
+        </div>
+    {% endif %}
+
+{%include "/template_part/header.html.twig" %}
+
 
 {% endblock %}
