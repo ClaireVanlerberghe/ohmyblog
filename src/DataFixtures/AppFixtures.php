@@ -28,6 +28,7 @@ class AppFixtures extends Fixture
         $claire->setPassword($hash);
         $claire->setNom('Vanlerberghe');
         $claire->setPrenom('Claire');
+        $claire->setPhoto('https://ibb.co/swJLbmk');
         $manager->persist($claire);
 
         //Utilisateur

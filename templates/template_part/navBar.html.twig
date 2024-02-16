@@ -1,0 +1,28 @@
+{# Si utilisateur connecté #}
+
+<div class="user">
+	{% if app.user %}
+		{% if app.user.photo is same as null %}
+			<div><img class="avatar" src="https://i.ibb.co/swJLbmk/user.png" alt="Icône de profil"/>
+			</div>
+			{% else %}<img class="photoProfil" src="{{app.user.photo}}" alt="photo de profil utilisateur"/>
+		{% endif %}
+
+
+		<p class="userName">{{app.user.nom}}
+			{{app.user.prenom}}</p>
+
+		<div class="userDeco">
+			<a href="{{ path('app_logout') }}">Deconnexion</a>
+		</div>
+	{% endif %}
+</div>
+
+
+
+{# Si utilisateur non connecté #}
+
+{% if not app.user %}
+	<a href="{{ path('app_login')}}">Connexion</a>
+	<a href="{{ path('app_register')}}">Inscription</a>
+{% endif %}
