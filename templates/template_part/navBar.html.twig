@@ -13,7 +13,7 @@
 			{{app.user.prenom}}</p>
 
 		<div class="userDeco">
-			<a href="{{ path('app_logout') }}">Deconnexion</a>
+			<a class="userDecoLink" href="{{ path('app_logout') }}">Deconnexion</a>
 		</div>
 	{% endif %}
 </div>
@@ -23,6 +23,8 @@
 {# Si utilisateur non connecté #}
 
 {% if not app.user %}
-	<a href="{{ path('app_login')}}">Connexion</a>
-	<a href="{{ path('app_register')}}">Inscription</a>
+<div class="authButton">
+	<a class="connexionButton" href="{{ path('app_login')}}">Connexion</a>
+	<button><a class="inscriptionButton" href="{{ path('app_register')}}">Inscription</a></button>
+	</div>
 {% endif %}

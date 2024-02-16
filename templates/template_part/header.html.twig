@@ -1,10 +1,9 @@
+
 <div class="header">
-    <h1><a class="headerTitle" href="{{ path('app_home')}}">Ohmyfood</a></h1>
+    <h1><a class="headerTitle" href="{{ path('app_home')}}">Ohmyblog</a></h1>
     <ul class="categories">
-        <li class="categorie">Catégorie</li>
-        <li class="categorie">Catégorie</li>
-        <li class="categorie">Catégorie</li>
-        <li class="categorie">Catégorie</li>
-        <li class="categorie">Catégorie</li>
+    {% for categorie in categories %}
+        <a class="categorieLink" href="#"><li class="categorie">{{categorie.nom}}</li></a>
+    {% endfor %}
     </ul>
 </div>
