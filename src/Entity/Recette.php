@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use App\Repository\RecetteRepository;
+
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
@@ -31,6 +32,13 @@ class Recette
 
     #[ORM\ManyToOne]
     private ?Categorie $categorie = null;
+
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $photo = null;
+
+
+
+   
 
     public function getId(): ?int
     {
@@ -108,4 +116,18 @@ class Recette
 
         return $this;
     }
+
+    public function getPhoto(): ?string
+    {
+        return $this->photo;
+    }
+
+    public function setPhoto(?string $photo): static
+    {
+        $this->photo = $photo;
+
+        return $this;
+    }
+
+  
 }

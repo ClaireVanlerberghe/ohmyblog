@@ -108,7 +108,16 @@ body{
 * HomePage CSS
 **/
 
+.recette{
+    display: flex;
+    flex-direction: column;
+}
 
+.recettePhoto{
+    width: 170px;
+    height: 115px;
+    object-fit: cover;
+}
 
 /* 
 * LoginPage CSS

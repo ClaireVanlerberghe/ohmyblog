@@ -9,6 +9,20 @@
 {%include "/template_part/navBar.html.twig" %}
 
 
+{% for recette in recettes %}
+
+<div class="recette">
+    <img class="recettePhoto" src="{{ recette.photo }}" alt="photo recette {{ recette.nom }}" />
+
+
+    <p class="recetteTitle">{{ recette.nom }}</p>
+    
+    <p class="recetteCategorie">{{ recette.categorie.nom }}</p>
+
+</div>
+
+    {% endfor %}
+
 
 
 
