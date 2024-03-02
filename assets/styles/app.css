@@ -49,6 +49,7 @@ body{
     color: white;
     font-family: "Nunito", sans-serif;
     font-size: 20px;
+    font-weight: 700;
     cursor: pointer; 
 }
 
@@ -92,6 +93,9 @@ body{
     position: absolute;
     top: 6%;
     right: 7%;
+    gap: 12%;
+    display: flex;
+    align-items: baseline;
 }
 
 .connexionButton{
@@ -108,15 +112,39 @@ body{
 * HomePage CSS
 **/
 
+.recettes{
+    display: flex;
+    flex-wrap: wrap;
+    width: 1016px;
+    gap: 41px;
+    margin: 140px 190px;
+}
+
 .recette{
     display: flex;
     flex-direction: column;
+    border-radius: 20px;
+    background: #FFD7D6;
+    box-shadow: 8px 8px 12px 0px rgba(255, 255, 255, 0.25) inset;
+    filter: drop-shadow(3px 3px 11px rgba(255, 110, 103, 0.25));
+    width: 220px;
+    height: 250px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
 }
 
 .recettePhoto{
-    width: 170px;
-    height: 115px;
+    width: 205px;
+    height: 125px;
     object-fit: cover;
+    border-top-right-radius: 14px;
+    border-top-left-radius: 14px;
+}
+
+.recetteText{
+    display: flex;
+    flex-direction: column;
 }
 
 /* 

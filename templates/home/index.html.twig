@@ -8,21 +8,22 @@
 
 {%include "/template_part/navBar.html.twig" %}
 
-
+<div class="recettes">
 {% for recette in recettes %}
 
 <div class="recette">
     <img class="recettePhoto" src="{{ recette.photo }}" alt="photo recette {{ recette.nom }}" />
 
-
+<div class="recetteText">
     <p class="recetteTitle">{{ recette.nom }}</p>
     
     <p class="recetteCategorie">{{ recette.categorie.nom }}</p>
+</div>
 
 </div>
 
     {% endfor %}
-
+</div>
 
 
 
