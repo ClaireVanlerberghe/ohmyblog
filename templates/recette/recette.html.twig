@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="recette-list">
+    <div class="recette-text">
+        <div class="recette-title">{{recette.nom}}</div>
+            <div class="recette-description">{{recette.description  | nl2br | raw}}</div>
+            <div class="carac-recette">
+                <button class="category-recette">{{recette.categorie.nom}}</button>
+            </div>
+            
+    </div>
+    <img class="recette-image" src='{{recette.photo}}' alt='{{recette.nom}}'>
+</div>
+<div class="commentaire-section">
+    <p class="commentaire-title">Commentaires</p>
+    {% for commentaire in commentaires %}
+    <div class="commentaire-content">
+        <div>{{commentaire.utilisateur.nom}}</div>
+        <div>{{commentaire.utilisateur.prenom}}</div>
+        <div>{{commentaire.contenu}}</div>
+        <div>{{commentaire.date | date("d/m/Y")}}</div>
+    </div>
+    {% endfor %}
+
+    {{ include('./commentaire/new.html.twig') }}
+</div>
+{% endblock %}
