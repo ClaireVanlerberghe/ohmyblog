@@ -11,13 +11,13 @@
 <div class="recettes">
 {% for recette in recettes %}
 
-<a href="{{ path("app_recetteById", {id: recette.id}) }}" class="recette">
-    <img class="recettePhoto" src="{{ recette.photo }}" alt="photo recette {{ recette.nom }}" />
+<a href="{{ path("app_recetteById", {id: recette.id}) }}" class="oneRecette">
+    <img class="recettesPhoto" src="{{ recette.photo }}" alt="photo recette {{ recette.nom }}" />
 
-<div class="recetteText">
-    <p class="recetteTitle">{{ recette.nom }}</p>
+<div class="recettesText">
+    <p class="recettesTitle">{{ recette.nom }}</p>
     
-    <p class="recetteCategorie">{{ recette.categorie.nom }}</p>
+    <p class="recettesCategorie">{{ recette.categorie.nom }}</p>
 </div>
 
 </a>
