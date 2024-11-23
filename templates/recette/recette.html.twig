@@ -1,33 +1,39 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-{%include "/template_part/navBar.html.twig" %}
-<div class="recetteEtCommentaires">
-    <div class="recetteList">
-        <img class="recetteImage" src='{{recette.photo}}' alt='{{recette.nom}}'>
-        <div class="recetteText">
-            <div class="recetteInfo">
-                <p class="recetteCategorie">{{recette.categorie.nom}}</p>
-                <p class="recetteTemps">Temps de préparation : {{recette.temps}} minutes</p>
-                <p class="recetteIngrédients">{{recette.ingredient | nl2br | raw}}</p>
-            </div>
-            <div class="recetteContenu">
-                <h2 class="recetteTitre">{{recette.nom}}</h2>
-                <p class="recetteDescription">{{recette.description  | nl2br | raw}}</p>
-                <p class="recetteDate">{{recette.date | date('d/m/y')}}</p>
-            </div>
-        </div>
-    </div>
-    <div class="commentairesSection">
-    {{ include('./commentaire/new.html.twig') }}
-        {% for commentaire in commentaires %}
-        <div class="commentaireContenu">
-            <div>{{commentaire.utilisateur.nom}}</div>
-            <div>{{commentaire.utilisateur.prenom}}</div>
-            <div>{{commentaire.contenu}}</div>
-            <div>{{commentaire.date | date("d/m/Y")}}</div>
-        </div>
-        {% endfor %}
-    </div>
-</div>
+	{%include "/template_part/navBar.html.twig" %}
+	<div class="recetteEtCommentaires">
+		<div class="recetteList">
+			<img class="recetteImage" src='{{recette.photo}}' alt='{{recette.nom}}'>
+			<div class="recetteText">
+				<div class="recetteInfo">
+					<p class="recetteCategorie">{{recette.categorie.nom}}</p>
+					<p class="recetteTemps">Temps de préparation :
+						{{recette.temps}}
+						minutes</p>
+					<p class="recetteIngrédients">{{recette.ingredient | nl2br | raw}}</p>
+				</div>
+				<div class="recetteContenu">
+					<p class="recetteDate">{{recette.date | date('d/m/y')}}</p>
+					<h2 class="recetteTitre">{{recette.nom}}</h2>
+					<p class="recetteDescription">{{recette.description  | nl2br | raw}}</p>
+				</div>
+			</div>
+		</div>
+		<div class="commentairesSection">
+			{{ include('./commentaire/new.html.twig') }}
+			{% for commentaire in commentaires %}
+				<div class="commentaireContenu">
+					<img class="photoProfil" src="{{commentaire.utilisateur.photo}}" alt="{{commentaire.utilisateur.nom}}"/>
+					<div class="commentaireProfilContenu">
+						<div class="commentaireProfil">
+							<p class="nomProfil">{{commentaire.utilisateur.nom}}</p>
+							<p>{{commentaire.utilisateur.prenom}}</p>
+						</div>
+						<p>{{commentaire.contenu}}</p>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
 {% endblock %}

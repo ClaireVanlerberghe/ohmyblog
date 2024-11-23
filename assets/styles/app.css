@@ -299,3 +299,26 @@ button:active{
     font-size: 25px;
     text-decoration: 1px underline black;
 }
+
+#commentaire_contenu{
+    font-family: "Nunito", sans-serif;
+    font-size: 19px;
+    padding-bottom: 90px;
+    border: none;
+    border-radius: 20px;
+    background: #FFD7D6;
+    box-shadow: 3px 3px 11px 0px rgba(255, 110, 103, 0.44) inset;
+    display: flex;
+}
+
+#commentaire_contenu::placeholder{
+    color: black;
+    display: flex;
+
+}
+
+.commentaireProfil{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
